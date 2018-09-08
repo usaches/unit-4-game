@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystals Collector!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <h1>Target: <span id="target"></span></h1>
+        <h1>Current Score: <span id="score"></span></h1>
+    </div>
+    <div class="row">
+
+        <h1><span id="status"></span></h1>
+    </div>
+    <div class="row">
+        <h1>Wins: <span id="wins"></span></h1>
+        <h1>Losses: <span id="losses"></span></h1>
+    </div>
+<br>
+<br>
+<div id="crystals">
+
+    <a href="#"> <img class="crystal-image" id="crystal1"
+                      src="http://www.clker.com/cliparts/q/C/R/k/3/G/green-crystal-md.png" alt="crystal1">
+    </a>
+    <a href="#"> <img class="crystal-image" id="crystal2"
+                      src="http://www.clker.com/cliparts/q/C/R/k/3/G/green-crystal-md.png" alt="crystal2">
+    </a>
+    <a href="#"> <img class="crystal-image" id="crystal3"
+                      src="http://www.clker.com/cliparts/q/C/R/k/3/G/green-crystal-md.png" alt="crystal3">
+    </a>
+    <a href="#"> <img class="crystal-image" id="crystal4"
+                      src="http://www.clker.com/cliparts/q/C/R/k/3/G/green-crystal-md.png" alt="crystal4">
+    </a>
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+<script>
+
+
+    var startingNumber = Math.floor(Math.random() * (121 - 19) + 19);
+    var crystal1value;
+    var crystal2value;
+    var crystal3value;
+    var crystal4value;
+    var score = 0;
+    var wins = 0;
+    var losses = 0;
+    document.getElementById("target").innerHTML = startingNumber;
+
+    console.log(Math.floor(Math.random() * (121 - 19) + 19));
+
+    // put in functions function
+    function reset() {
+        startingNumber = Math.floor(Math.random() * (121 - 19) + 19);
+        crystal1value = Math.floor(Math.random() * (13 - 1) + 1);
+        crystal2value = Math.floor(Math.random() * (13 - 1) + 1);
+        crystal3value = Math.floor(Math.random() * (13 - 1) + 1);
+        crystal4value = Math.floor(Math.random() * (13 - 1) + 1);
+        score = 0;
+        document.getElementById("target").innerHTML = startingNumber;
+        document.getElementById("score").innerHTML = score;
+    }
+
+    reset();
+    $("#crystal1").on("click", function () {
+        score = score + crystal1value;
+        document.getElementById("score").innerHTML = score;
+        document.getElementById("status").innerHTML = "KEEP CLICKING!";
+        if (score === startingNumber) {
+            wins++;
+            document.getElementById("wins").innerHTML = wins;
+            document.getElementById("status").innerText = "YOU WIN!";
+            reset();
+        }
+        else if (score > startingNumber) {
+            losses++;
+            document.getElementById("losses").innerHTML = losses;
+            document.getElementById("status").innerText = "LOSER!!! TRY AGAIN";
+            reset();
+        }
+    });
+    $("#crystal2").on("click", function () {
+        score = score + crystal2value;
+        document.getElementById("score").innerHTML = score;
+        document.getElementById("status").innerHTML = "KEEP CLICKING!";
+        if (score === startingNumber) {
+            wins++;
+            document.getElementById("wins").innerHTML = wins;
+            document.getElementById("status").innerText = "YOU WIN!";
+            reset();
+        }
+        else if (score > startingNumber) {
+            losses++;
+            document.getElementById("losses").innerHTML = losses;
+            document.getElementById("status").innerText = "LOSER!!! TRY AGAIN";
+            reset();
+        }
+    });
+    $("#crystal3").on("click", function () {
+        score = score + crystal3value;
+        document.getElementById("score").innerHTML = score;
+        document.getElementById("status").innerHTML = "KEEP CLICKING!";
+        if (score === startingNumber) {
+            wins++;
+            document.getElementById("wins").innerHTML = wins;
+            document.getElementById("status").innerText = "YOU WIN!";
+            reset();
+        }
+        else if (score > startingNumber) {
+            losses++;
+            document.getElementById("losses").innerHTML = losses;
+            document.getElementById("status").innerText = "LOSER!!! TRY AGAIN";
+            reset();
+        }
+    });
+    $("#crystal4").on("click", function () {
+        score = score + crystal4value;
+        document.getElementById("score").innerHTML = score;
+        document.getElementById("status").innerHTML = "KEEP CLICKING!";
+        if (score === startingNumber) {
+            wins++;
+            document.getElementById("wins").innerHTML = wins;
+            document.getElementById("status").innerText = "YOU WIN!";
+            reset();
+        }
+        else if (score > startingNumber) {
+            losses++;
+            document.getElementById("losses").innerHTML = losses;
+            document.getElementById("status").innerText = "LOSER!!! TRY AGAIN";
+            reset();
+        }
+    });
+</script>
+</body>
+</html>
+<!--// prompt for plyaer guess-->
+<!--// generate 1 random number 19-120-->
+<!--// generate 4 rndom number variables 1-12 assigned to each crystal-->
+<!--// on click add that number variable to score-->
+<!--// update score-->
+<!--//check if score matches players initial guess-->
+<!--//wins++ losses++-->
+
+

@@ -1,0 +1,28 @@
+.crystal-image {
+    width: 250px;
+    height: 250px;
+}
+
+html {
+    background-color: black;
+}
+
+body {
+    background-color: black;
+}
+
+head {
+    background-color: black;
+}
+h1 {
+    color: gold;
+    padding: 20px;
+    margin-left:50px;
+}
+img {
+    margin: 5px;
+
+}
+#crystal1 {
+    margin-left: 8%;
+}
