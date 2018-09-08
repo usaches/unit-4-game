@@ -78,71 +78,71 @@
     reset();
     $("#crystal1").on("click", function () {
         score = score + crystal1value;
-        document.getElementById("score").innerHTML = score;
-        document.getElementById("status").innerHTML = "KEEP CLICKING!";
+        $("#score").text(score);
+        $("#status").text("KEEP CLICKING!");
         if (score === startingNumber) {
             wins++;
-            document.getElementById("wins").innerHTML = wins;
-            document.getElementById("status").innerText = "YOU WIN!";
+            $("#wins").text(wins);
+            $("#status").text("YOU WIN!");
             reset();
         }
         else if (score > startingNumber) {
             losses++;
-            document.getElementById("losses").innerHTML = losses;
-            document.getElementById("status").innerText = "LOSER!!! TRY AGAIN";
+            $("#losses").text(losses);
+           $("#status").text("LOSER!!! TRY AGAIN");
             reset();
         }
     });
     $("#crystal2").on("click", function () {
         score = score + crystal2value;
-        document.getElementById("score").innerHTML = score;
-        document.getElementById("status").innerHTML = "KEEP CLICKING!";
-        if (score === startingNumber) {
-            wins++;
-            document.getElementById("wins").innerHTML = wins;
-            document.getElementById("status").innerText = "YOU WIN!";
-            reset();
-        }
-        else if (score > startingNumber) {
-            losses++;
-            document.getElementById("losses").innerHTML = losses;
-            document.getElementById("status").innerText = "LOSER!!! TRY AGAIN";
-            reset();
-        }
+      $("#score").text(score);
+      $("#status").text("KEEP CLICKING!");
+      if (score === startingNumber) {
+        wins++;
+        $("#wins").text(wins);
+        $("#status").text("YOU WIN!");
+        reset();
+      }
+      else if (score > startingNumber) {
+        losses++;
+        $("#losses").text(losses);
+        $("#status").text("LOSER!!! TRY AGAIN");
+        reset();
+      }
     });
     $("#crystal3").on("click", function () {
         score = score + crystal3value;
-        document.getElementById("score").innerHTML = score;
-        document.getElementById("status").innerHTML = "KEEP CLICKING!";
-        if (score === startingNumber) {
-            wins++;
-            document.getElementById("wins").innerHTML = wins;
-            document.getElementById("status").innerText = "YOU WIN!";
-            reset();
-        }
-        else if (score > startingNumber) {
-            losses++;
-            document.getElementById("losses").innerHTML = losses;
-            document.getElementById("status").innerText = "LOSER!!! TRY AGAIN";
-            reset();
-        }
+      $("#score").text(score);
+      $("#status").text("KEEP CLICKING!");
+      if (score === startingNumber) {
+        wins++;
+        $("#wins").text(wins);
+        $("#status").text("YOU WIN!");
+        reset();
+      }
+      else if (score > startingNumber) {
+        losses++;
+        $("#losses").text(losses);
+        $("#status").text("LOSER!!! TRY AGAIN");
+        reset();
+      }
     });
     $("#crystal4").on("click", function () {
         score = score + crystal4value;
-        document.getElementById("score").innerHTML = score;
-        document.getElementById("status").innerHTML = "KEEP CLICKING!";
-        if (score === startingNumber) {
-            wins++;
-            document.getElementById("wins").innerHTML = wins;
-            document.getElementById("status").innerText = "YOU WIN!";
-            reset();
-        }
-        else if (score > startingNumber) {
-            losses++;
-            document.getElementById("losses").innerHTML = losses;
-            document.getElementById("status").innerText = "LOSER!!! TRY AGAIN";
-            reset();
-        }
+      $("#score").text(score);
+      $("#status").text("KEEP CLICKING!");
+      if (score === startingNumber) {
+        wins++;
+        $("#wins").text(wins);
+        $("#status").text("YOU WIN!");
+        reset();
+      }
+      else if (score > startingNumber) {
+        losses++;
+        $("#losses").text(losses);
+        $("#status").text("LOSER!!! TRY AGAIN");
+        reset();
+      }
     });
 </script>
 </body>
